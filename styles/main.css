@@ -1,4 +1,99 @@
 body {
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+}
+
+main {
+  background-color: hsl(217deg, 54%, 11%);
+  color: white;
+  margin: 0;
+  padding: 2em 1em;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 10px;
+  padding: 1em;
+}
+.card .hero-img {
+  position: relative;
+}
+.card .hero-img .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178deg, 100%, 50%, 0.679);
+  border-radius: 8px;
+  display: none;
+}
+.card .hero-img .hover-state {
+  position: absolute;
+  left: 45%;
+  top: 42%;
+}
+.card .hero-img:hover {
+  cursor: pointer;
+}
+.card .hero-img:hover .overlay {
+  display: block;
+}
+.card img.hero {
+  width: 100%;
+  border-radius: 8px;
+}
+.card .description h1:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+.card .description p {
+  font-size: 18px;
+  color: hsl(215deg, 51%, 70%);
+}
+.card .description h4 {
+  color: hsl(178deg, 100%, 50%);
+  font-size: 0.98rem;
+}
+.card .description h4 span {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 100;
+  margin-left: 6em;
+  float: right;
+}
+.card .avatar {
+  border-top: 1px solid hsl(215deg, 32%, 27%);
+  padding: 1em;
+  display: flex;
+  color: hsl(215deg, 51%, 70%);
+}
+.card .avatar img {
+  width: 50px;
+  height: 50px;
+}
+.card .avatar span {
+  color: white;
+}
+.card .avatar span:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+
+@media only screen and (min-width: 700px) {
+  main {
+    padding: 6em 3em;
+  }
+  .card {
+    padding: 3em;
+  }
+}
+@media only screen and (min-width: 920px) {
+  main {
+    padding: 5% 33%;
+  }
+  .card {
+    padding: 4%;
+  }
+  .card h4 span {
+    float: right;
+  }
 }/*# sourceMappingURL=main.css.map */

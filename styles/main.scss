@@ -1,5 +1,117 @@
 body {
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
+}
 
+main {
+    background-color: hsl(217, 54%, 11%);
+    color: white;
+    margin: 0;
+    padding: 2em 1em;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    padding: 1em;
+
+    .hero-img {
+        position: relative;
+        .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(178, 100%, 50%, 0.679);
+            border-radius: 8px;
+            display: none;
+        }
+        .hover-state {
+            position: absolute;
+            left: 45%;
+            top: 42%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            .overlay {
+                display: block;
+            }
+        }
+    }
+    img.hero {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .description {
+        h1 {
+            &:hover {
+                cursor: pointer;
+                color: hsl(178, 100%, 50%);
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: hsl(215, 51%, 70%);
+        }
+        h4 {
+            color: hsl(178, 100%, 50%);
+            font-size: .98rem;
+            // display: flex;
+            // flex-direction: row;
+            span {
+                color: hsl(215, 51%, 70%);
+                font-weight: 100;
+                margin-left: 6em;
+                float: right;
+            }
+        }
+        
+    }
+
+    .avatar {
+        border-top: 1px solid hsl(215, 32%, 27%);
+        padding: 1em;
+        display: flex;
+        color:hsl(215, 51%, 70%);
+        // justify-content: center;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        span {
+            color: white;
+            &:hover {
+                cursor: pointer;
+                color: hsl(178, 100%, 50%);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    main {
+        padding: 6em 3em;
+    }
+    .card {
+        padding: 3em;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    main {
+        padding: 5% 33%;
+    }
+
+    .card {
+        padding: 4%;
+        h4 {
+            span {
+                float: right;
+            }
+        }
+    }
 }
